@@ -1,0 +1,64 @@
+//crear usuario
+POST http://localhost:5000/usuario
+Content-Type: application/json  
+
+{
+    "nombres":"Mariana ",
+    "apellidos":"Gonzales",
+    "email":"mariana@gmail.com",
+    "contrasena":"123456",
+    "confContrasena":"123456",
+    "rol":"usuario"
+}
+###
+GET http://localhost:5000/usuarios
+
+###
+DELETE  http://localhost:5000/usuario/4f56ef8d-cd59-445a-a58e-0ba86645530c
+###
+//ingresar
+
+POST http://localhost:5000/ingresar
+Content-Type: application/json  
+
+{
+    "email":"mariana@gmail.com",
+    "contrasena":"123456"
+}
+
+###
+GET http://localhost:5000/yo
+
+###
+DELETE  http://localhost:5000/salir
+
+###
+GET http://localhost:5000/productos
+
+###
+GET http://localhost:5000/producto/39024948-2494-4129-b355-344337e9e9ca
+
+###
+//crear productos
+POST http://localhost:5000/producto
+Content-Type: application/json
+
+{
+    "nombre":"Xiaomi redmi note 20 pro",
+    "marca":"Xiaomi",
+    "precio": 2500000
+}
+
+###
+//crear productos
+PATCH  http://localhost:5000/producto/6b2a42e2-dc99-480c-afc0-5f080f120340
+Content-Type: application/json
+
+{
+    "nombre":"Motorola g30",
+    "marca":"Motorola",
+    "precio": 1500000
+}
+
+###
+DELETE  http://localhost:5000/producto/e91bb905-5fe7-4e4d-8222-72207aa9e306
